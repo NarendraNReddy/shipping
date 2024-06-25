@@ -8,7 +8,7 @@ WORKDIR /opt/shipping
 COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
 COPY src /opt/shipping/src/
-# RUN mvn package
+RUN mvn package
 
 # # this is JRE based on alpine OS
 # FROM openjdk:8-jre-alpine3.9
